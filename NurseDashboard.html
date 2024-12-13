@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nurse Dashboard</title>
+    <link rel="stylesheet" href="NurseDashboard.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <header class="navbar">
+        <h1>Nurse Dashboard</h1>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Patients</a></li>
+            <li><a href="#">Tasks</a></li>
+            <li><a href="#" id="logout-btn">Logout</a></li>
+        </ul>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Search Bar -->
+        <div class="search-bar">
+            <input type="text" id="search-input" placeholder="Search for a patient...">
+            <button id="search-btn">Search</button>
+        </div>
+
+        <!-- Patient List -->
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Condition</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="patient-table-body">
+                <!-- Patient rows will be populated dynamically -->
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Modal -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="close-modal">&times;</span>
+            <p id="modal-text">Modal content goes here...</p>
+            <button class="confirm" id="confirm-btn">Confirm</button>
+            <button class="cancel" id="cancel-btn">Cancel</button>
+        </div>
+    </div>
+
+    <script src="NurseDashboard.js"></script>
+</body>
+</html>

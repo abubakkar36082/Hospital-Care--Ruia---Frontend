@@ -1,0 +1,315 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: url("assets/2.jpg") no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #fff;
+    overflow: hidden;
+}
+
+.nav-bar {
+    position: fixed; /* Fix the nav bar to the top of the viewport */
+    top: 0; /* Align the nav bar at the top */
+    left: 0; /* Align the nav bar to the left */
+    width: 100%; /* Make the nav bar span the full width */
+    background-color: rgba(0, 0, 0, 0.9); /* Background with some transparency */
+    padding: 10px 20px; /* Inner spacing */
+    z-index: 1000; /* Ensure it stays above other elements */
+    display: flex; /* Flexbox for alignment */
+    justify-content: space-between; /* Space between title and buttons */
+    align-items: center; /* Center items vertically */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Optional shadow */
+}
+
+
+.nav-bar h1 {
+    color: #fff;
+    font-size: 24px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.nav-bar button {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    margin: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+.nav-bar button:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+/* Header Styling */
+.header {
+    text-align: center;
+    color: #fff;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* Increased shadow for readability */
+    font-size: 28px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-bottom: 40px;
+}
+
+/* Container Styling */
+.container {
+    display: -webkit-inline-flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 90%;
+    max-width: 600px;
+    background: rgba(0, 0, 0, 0.6); /* Darker overlay for better contrast */
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0px 15px 40px rgba(0, 0, 0, 0.842);
+    animation: fadeIn 1.5s ease-in-out; /* Fade-in animation */
+}
+
+/* Form Container Styling */
+.form-container {
+    width: 300px;
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.9); /* Slightly less transparent */
+    border-radius: 12px;
+    margin: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    color: #333;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-container:hover {
+    transform: translateY(-5px); /* Subtle lift on hover */
+    box-shadow: 0 12px 24px rgba(255, 36, 36, 0.4);
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #444;
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.input-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #444;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    transition: border-color 0.3s;
+}
+
+.input-group input:focus {
+    border-color: #4CAF50;
+    outline: none;
+}
+
+/* Button Styling */
+.btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s;
+}
+
+.btn:hover {
+    background-color: #45a049;
+    transform: scale(1.02); /* Slightly larger on hover */
+}
+
+.register-link,
+.login-link {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.register-link a,
+.login-link a {
+    color: #4CAF50;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.register-link a:hover,
+.login-link a:hover {
+    text-decoration: underline;
+}
+
+.modal {
+    display: flex; /* Flexbox for centering */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    animation: fadeIn 0.5s; /* Fade-in animation */
+    z-index: 1000; /* Ensure it appears above other elements */
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.modal-content {
+    background-color: rgb(182, 41, 41);
+    padding: 25px;
+    border-radius: 12px;
+    max-width: 400px;
+    width: 90%;
+    text-align: center;
+    color: #2696ca;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    position: relative;
+    animation: scaleUp 0.3s ease-in-out; /* Optional scaling effect */
+}
+
+@keyframes scaleUp {
+    from { transform: scale(0.9); }
+    to { transform: scale(1); }
+}
+
+#success-modal {
+    
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    background-color: rgba(0, 0, 0, 0.5); /* Optional: To dim the background */
+    z-index: 1000; /* Make sure the modal is above other content */
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 400px;
+    width: 100%;
+    height: 15%;
+}
+
+#success-modal p {
+    text-align: center;
+    color: #288a35;
+    
+}
+
+
+/* Close Button */
+.close-btn {
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 20px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    transition: background-color 0.3s;
+}
+
+.close-btn:hover {
+    background-color: darkred;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .form-container {
+        width: 90%;
+    }
+}
+
+
+/* Modal Styling */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Style the dropdown */
+select {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    font-size: 16px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    transition: border-color 0.3s ease;
+    color: #333;
+}
+
+/* Change border color when the dropdown is focused */
+select:focus {
+    border-color: #4CAF50;
+    outline: none;
+    background-color: #e0e0e0; /* Slight change in background color when focused */
+}
+
+/* Optional: Style the option elements inside the dropdown */
+select option {
+    padding: 10px;
+    background-color: #fff;
+    font-size: 16px;
+    color: #333;
+}
+
+/* Adjust the look of the dropdown on hover */
+select:hover {
+    background-color: #f1f1f1;
+}

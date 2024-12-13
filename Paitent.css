@@ -1,0 +1,224 @@
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(1111deg, rgba(32, 31, 31, 0.8), rgba(121, 121, 121, 0.8)),
+                url('assets/2.jpg') no-repeat center center fixed;
+    background-size: cover;
+    background-blend-mode: overlay;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    backdrop-filter: blur(2px); /* Apply blur effect */
+}
+
+/* Navbar styling */
+.navbar {
+    width: 100%;
+    background-color: #4796aaa1;
+    padding: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+}
+
+.navbar h1 {
+    color: white;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.navbar ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+}
+
+.navbar li {
+    display: inline-block;
+    margin: 0 20px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    transition: color 0.3s ease-in-out;
+}
+
+.navbar a:hover {
+    color: #ffdf00;  /* Golden color for hover effect */
+}
+
+/* Container styling */
+.container {
+    width: 90%;
+    max-width: 600px; /* Adjusted width for a smaller form */
+    margin: 40px auto;
+    padding: 20px;
+    background-color: rgba(10, 10, 10, 0.459);
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Form styling */
+.form-container {
+    padding: 20px;
+    background-color: #0808085d;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    text-align: center; /* Center align form elements */
+}
+
+h2 {
+    text-align: center;
+    color: #f8f8f8;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Input groups */
+.input-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.input-group label {
+    font-weight: bold;
+    color: #ffffff;
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px; /* Smaller font size */
+}
+
+.input-group input,
+.input-group select,
+.input-group textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px; /* Smaller font size */
+    border: 1px solid #03f538;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent input background */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.input-group input:focus,
+.input-group select:focus,
+.input-group textarea:focus {
+    border-color: #4CAF50; /* Green focus border */
+    outline: none;
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.8); /* Subtle glow effect */
+}
+
+/* Button styling */
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 18px;
+    font-size: 14px; /* Smaller font size */
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    width: auto; /* Button adapts to content */
+    margin: 10px auto; /* Center-align button */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #45a049;
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+/* Patient Table Styling */
+.patient-list {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.patient-list table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #ffffff11; /* Transparent table background */
+}
+
+.patient-list th,
+.patient-list td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #ccc;
+    color: #f8f8f8; /* Light text for contrast */
+}
+
+.patient-list th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.patient-list tbody tr:hover {
+    background-color: #f2f2f2;
+    cursor: pointer;
+}
+
+/* Action buttons in the table */
+.patient-list .actions button {
+    background-color: #f44336;
+    color: white;
+    padding: 8px 14px;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.patient-list .actions button:hover {
+    background-color: #d32f2f;
+    transform: scale(1.05);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+        padding: 20px;
+    }
+
+    .navbar h1 {
+        font-size: 20px;
+    }
+
+    .navbar li {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    .input-group input,
+    .input-group select,
+    .input-group textarea {
+        font-size: 12px;
+    }
+
+    button {
+        font-size: 12px;
+    }
+
+    .patient-list table {
+        font-size: 12px;
+    }
+
+    .patient-list th,
+    .patient-list td {
+        padding: 8px;
+    }
+}

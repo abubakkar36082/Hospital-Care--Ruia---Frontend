@@ -1,0 +1,297 @@
+/* Body styling */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(1111deg, rgba(231, 231, 231, 0.8), rgba(243, 243, 243, 0.8)),
+                url('assets/2.jpg') no-repeat center center fixed;
+    background-size: cover;
+    background-blend-mode: overlay;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    backdrop-filter: blur(20px); /* Apply blur effect */
+}
+
+/* Container styling */
+.container {
+    width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fafafa23;
+    border: 3px solid #c7c7c7e7;
+    box-shadow: 10px 4px 22px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    color: #333;
+}
+
+.search-bar {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;
+}
+
+.search-bar input {
+    width: 300px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.search-bar button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.search-bar button:hover {
+    background-color: #45a049;
+}
+
+/* Table styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+   
+}
+
+table th, table td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #3b343bbd;
+    color: #ffffff;
+}
+
+table th {
+    background-color: #4e85c5;
+    color: #ffffff;
+}
+
+table tbody tr {
+    background-color: #0a0a0aaf;
+    color: #ffffff;
+    
+}
+
+table tbody tr:hover {
+    background-color: #9e4d4d;
+    transition: background-color 0.3s ease;
+    transform: scale(1.01); /* Slightly increase the size on hover */
+}
+
+/* Navbar Styling */
+.navbar {
+    width: 100%;
+    background-color: #925148cb;  /* Dark blue-gray background for a sleek look */
+    padding: 12px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.navbar ul {
+    list-style-type: none;
+   
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar li {
+    padding: 10px 20px;
+    /* background-color: #202020c2; */
+    position: relative;
+}
+
+.navbar a {
+    color: #ecf0f1;  /* Light text color for good contrast */
+    text-decoration: none;
+    font-size: 14px;
+    display: block;
+    font-weight: 500;
+    transition: all 0.3s ease-in-out;  /* Smooth transition */
+}
+
+.navbar a:hover {
+    color: #3498db;  /* Blue color on hover for a modern look */
+    transform: scale(1.1); /* Slight scaling effect for interactivity */
+}
+
+.navbar a:active {
+    color: #2980b9;  /* Slightly darker blue when clicked */
+}
+
+/* Adding a smooth dropdown effect */
+.navbar li:hover .dropdown-content {
+    display: block;
+}
+
+
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .navbar ul {
+        flex-direction: column; /* Stack navbar items on smaller screens */
+    }
+
+    .navbar li {
+        width: 100%;
+        text-align: left;
+    }
+
+    .navbar a {
+        padding: 12px 20px;
+        font-size: 16px;
+    }
+}
+
+
+/* Modal styling */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0); /* Black background with transparency */
+    backdrop-filter: blur(4px); /* Slight blur effect for the background */
+}
+
+/* Modal content styling */
+.modal-content {
+    background-color: #05050581; /* White background */
+    margin: 15% auto; /* Centered vertically and horizontally */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 30%; /* Responsive width */
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5); /* Box shadow for depth */
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Modal text */
+.modal-content p {
+    font-size: 18px;
+    color: #ffffff; /* Neutral text color */
+    margin-bottom: 20px;
+}
+
+/* Buttons */
+.modal-content button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px;
+    transition: all 0.3s ease;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* Confirm button */
+.modal-content .confirm {
+    background-color: #f44336a2; /* Red for delete */
+    color: #fff;
+    box-shadow: 0 4px 6px rgba(244, 67, 54, 0.4); /* Slight shadow for button */
+}
+
+.modal-content .confirm:hover {
+    background-color: #d32f2f4d;
+    box-shadow: 0 6px 10px rgba(211, 47, 47, 0.5); /* Enhanced shadow on hover */
+    transform: scale(1.05); /* Slight scaling effect */
+}
+
+/* Cancel button */
+.modal-content .cancel {
+    background-color: #4caf50; /* Green for cancel */
+    color: #fff;
+    box-shadow: 0 4px 6px rgba(76, 175, 80, 0.4);
+}
+
+.modal-content .cancel:hover {
+    background-color: #388e3c;
+    box-shadow: 0 6px 10px rgba(56, 142, 60, 0.5);
+    transform: scale(1.05); /* Slight scaling effect */
+}
+
+/* Close button styling */
+.modal-content .close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #943f3f;
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.2s ease; /* Added transform */
+}
+
+.modal-content :hover {
+    color: #a71c1c;
+    background-color: #3692b6b2;
+    
+}
+/* Delete Button Styles */
+#deletebtn {
+    color: #ffffff;
+    padding: 10px 20px;  /* Adjusted padding for better button appearance */
+    background-color: #ececec5b;
+    border-radius: 8px;
+    border: none;  /* Removed border for cleaner look */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Added smooth transition */
+}
+
+#deletebtn:hover {
+    color: #0ebde9;
+    background-color: #d1442a; /* Slightly darker red for hover effect */
+    transform: scale(1.1); /* Slightly increase the size on hover */
+}
+
+/* Edit Button Styles */
+#editbtn {
+    color: #ffffff;
+    padding: 10px 20px;  /* Adjusted padding */
+    background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent background */
+    border-radius: 8px;
+    border: none;
+    cursor: pointer; /* Change cursor to pointer on hover */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Added smooth transition */
+}
+
+#editbtn:hover {
+    color: #0ebde9;
+    background-color: #57b14f; /* Dark background on hover */
+    transform: scale(1.1); /* Slightly increase the size on hover */
+}
+
+/* Additional Button Effects */
+button {
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase; /* Uppercase text for buttons */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Added shadow for depth */
+    transition: box-shadow 0.3s ease;
+}
+
+button:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Larger shadow on hover */
+}
+
+/* Focus State for Accessibility */
+button:focus {
+    outline: 3px solid #0ebde9; /* Outline for focus state */
+}
+

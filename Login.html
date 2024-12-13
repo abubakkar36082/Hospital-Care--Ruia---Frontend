@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Human's Care Hospital - Staff Login & Register</title>
+    <link rel="stylesheet" href="Login.css">
+</head>
+
+<body>
+    <!-- Header Navbar -->
+    <header class="navbar">
+        <h1>Human's Care Hospital - Staff Portal</h1>
+    </header>
+
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Login Form -->
+        <div class="form-container" id="login-form-container">
+            <h2>Login</h2>
+            <form id="login-form">
+                <div class="input-group">
+                    <label for="username">Username or Email</label>
+                    <input type="text" id="username" name="username" placeholder="Enter username or email" required>
+                </div>
+                <div class="input-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                </div>
+                <button type="submit" class="btn">Login</button>
+                
+            </form>
+        </div>
+        
+       
+
+    <!-- Success/Error Modal -->
+    <div id="success-modal" class="modal" style="display:none;">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <h2>Success!</h2>
+            <p>Your login was successful.</p>
+        </div>
+    </div>
+
+    <!-- Link to JavaScript -->
+    <script src="Login.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="Admindashboard.css">
+</head>
+<body>
+    <div class="nav-bar">
+        <h1>Admin Dashboard</h1>
+        <button onclick="location.href='listall.html'">Staff List</button>
+        <button onclick="location.href='addstaff.html'">Add Staff</button>
+        <button onclick="location.href='Listall.html'">Search Staff</button>
+        <button onclick="location.href='Adduser.html'">Create User</button>
+        <button class="logout-button" onclick="logout()">Logout</button>
+    </div>
+    
+    <!-- Welcome Section -->
+    <div class="welcome-section">
+        <h2>Welcome, Abubakkar!</h2>
+        <h1> Ruia Government General Hospital </h1>   
+        <p>Manage your organization's staff efficiently using the tools below. Navigate through the options to view, add, or search staff members.</p>
+    </div>
+    
+    <!-- Add Staff Section -->
+    <div id="addSection" class="section">
+        <h2>Add New Staff</h2>
+        <p>Click the button below to redirect to the Add Staff page:</p>
+        <button type="button" onclick="redirectToAddStaffPage()">Go to Add Staff Page</button>
+    </div>
+
+    <!-- Search Staff Section -->
+    <div id="searchSection" class="section">
+        <h2>Search Staff by ID</h2>
+        <p>Enter the Staff ID below to find specific details:</p>
+        <input type="number" id="searchId" placeholder="Enter Staff ID">
+        <button onclick="searchStaff()">Search</button>
+        <div id="searchResult"></div>
+    </div>
+
+    <script>
+        function redirectToAddStaffPage() {
+            window.location.href = "Addstaff.html";  // Replace with the actual URL or path of the page to redirect
+        }
+
+        // Logout function
+        function logout() {
+            alert('You have been logged out successfully.');
+            window.location.href = "login.html"; // Redirect to the login page
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Human's Care Hospital - Staff Login & Register</title>
+    <link rel="stylesheet" href="DoctorDashboard.css">
+   
+</head>
+
+<body>
+    <div class="nav-bar">
+        <h1>Doctor Dashboard</h1>
+        <button onclick="location.href='listall.html'">Nurse List</button>
+        <button onclick="location.href='addstaff.html'">Add Nurse</button>
+        <button onclick="location.href='Listall.html'">Search Nurse</button>
+        <button onclick="location.href='DoctorDashboard.html'">Dashboard</button>
+        <button class="logout-button" onclick="logout()">Logout</button>
+    </div>
+    
+    <!-- Header Navbar -->
+    <header class="navbar">
+        <h1>Human's Care Hospital - Staff Portal  </h1>
+        <h3>Create A New User Account</h3>
+    </header>
+
+    <!-- Main Container -->
+    <div class="container">
+     
+        
+        <!-- Register Form -->
+        <div class="form-container" id="register-form-container" style="display:block;">
+            <h2>Register Nurse</h2>
+            <form id="register-form">
+                <div class="input-group">
+                    <label for="register-username">Username</label>
+                    <input type="text" id="register-username" name="username" placeholder="Create a username" required>
+                </div>
+                <div class="input-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                </div>
+                <div class="input-group">
+                    <label for="register-password">Password</label>
+                    <input type="password" id="register-password" name="password" placeholder="Create a password" required>
+                </div>
+                <div class="input-group">
+                    <label for="confirm-password">Confirm Password</label>
+                    <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm your password" required>
+                </div>
+                <div class="input-group">
+                    <label for="role">Role</label>
+                    <select id="role" name="role" required>
+                        
+                        <option value="Nurse">Nurse</option>
+                        
+                    </select>
+                </div>
+                <button type="submit" class="btn">Register</button>
+                
+            </form>
+        </div>
+    </div>
+
+    <!-- Success/Error Modal -->
+    <div id="success-modal" class="modal" style="display:none;">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <h2>Success!</h2>
+            <p>Your login was successful.</p>
+        </div>
+    </div>
+
+    <!-- Link to JavaScript -->
+    <script src="Adduser.js"></script>
+</body>
+
+</html>
